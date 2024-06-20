@@ -149,7 +149,7 @@ class Player {
             this.velocityY += 0.8; // Gravity
         } else {
             this.velocityY = 0;
-            if (this.y > canvasHeight / 1.4) {
+            if (this.y > canvasHeight / 3) {
                 this.y -= this.speed; // Hover upwards
             }
         }
@@ -173,7 +173,7 @@ class Player {
             } else {
                 this.sprite.src = 'img/player-jet-left.png';
             }
-            clearTimeout(this.jetpackTimeout);
+           
             this.jetpackTimeout = setTimeout(() => {
                 this.jetpackActive = false;
                 if (this.direction === 'right') {
@@ -182,6 +182,7 @@ class Player {
                     this.sprite.src = 'img/player-left.png';
                 }
             }, 5000);
+            clearTimeout(this.jetpackTimeout);
         }
     }
     UseIncreaseFireRate() {
@@ -297,7 +298,7 @@ class Block {
         ctx.fillStyle = this.color;
         ctx.fillRect(this.x, this.y, this.width, this.height);
         ctx.fillStyle = 'white';
-        ctx.fillText(`H: ${this.health}`, this.x, this.y - 10);
+        ctx.fillText(`${this.health}`, this.x, this.y - 10);
     }
 }
 
@@ -437,7 +438,7 @@ function shoot() {
 }
 
 function deployBlock() {
-    const block = new Block(player.x + 55, player.y , 50, 50);
+    const block = new Block(player.x + 70, player.y - 20 , 50, 100);
     blocks.push(block);
 }
 
