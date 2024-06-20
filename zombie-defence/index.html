@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zombie Defense Game</title>
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap">
+    <link rel = "stylesheet" href = "styles.css">
+    <style>
+        canvas {
+            background: #50608a;
+            display: block;
+            margin: 0 auto;
+            background-image: url('img/background2.jpg');
+        }
+        #controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            background: rgb(62, 139, 52);
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="1500" height="650"></canvas>
+    <div id="introScreen" class="intro-screen">
+        <p class="intro-text">
+            You are in the midst of a Zombie apocalypse and you are the lone survivor. You have to fend off attacks from Zombies. <br>
+            You are given Health points of 100 at the start of the game. Every zombie that touches you decreases your Health by 10 points. <br>
+            You are also given Resources points of 200. You can use this to buy resources to help you out. <br>
+            You die when your Health reaches 0 and the game is over. <br><br>
+
+            Instructions to play the game:<br>
+            1. Press "a" key to move left. Press "d" key to move right. <br>
+            2. Press "s" key to shoot. <br>
+            3. Press "b" key to install blocks adjacent to the player. Blocks can be used to stall the movement of zombies while you move to a safer location. <br>
+            4. Press "w" key to jump for some moments so that you can be safe from the zombies. <br>
+            5. You can also use Jet Pack to be above the level of the zombies so that they cannot attack you and you can shoot down bullets while hovering. This will cost 30 points from Resources. <br>
+            6. You can also use the "Increase Fire Rate" button to increase the rate of firing bullets. This will cost 30 points from Resources. <br><br>
+
+            Press the start key to start the game if you have finished reading through.
+        </p>
+        <button id="startButton">Start</button>
+    </div>
+    <div id = "instruction">
+        <span>
+            keys:-  s: shoot, a: left, d: right, w: jump, b: deploy blocks
+        </span>
+    </div>
+    <div id="controls">
+        <button id="pauseButton">Pause</button>                                                             
+        <button id="resumeButton">Resume</button>
+        <button id="jetpackButton">Jet Pack</button>
+        <button id="IncreaseFireRate">Increase Fire Rate</button>
+    </div>
+    <div id = "instruction2">
+        <span>
+            You can press "b" key to install blocks adjacent to the player. Blocks can be used to stall the movement of zombies while you move to a safer location.<br>
+            You can also use Jet Pack to be above the level of the zombies so that they cannot attack you and you can shoot down bullets while hovering.
+        </span>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
