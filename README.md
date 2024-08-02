@@ -30,7 +30,7 @@ Zombie Defense is a 2D game where you are the lone survivor in a zombie apocalyp
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Yumnam-L/zombie-defense.git
+   git clone https://github.com/Yumnam-L/zombie--defense.git
    ```
    
 2. **Navigate to the project directory:**
