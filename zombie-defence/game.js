@@ -182,7 +182,7 @@ class Player {
                     this.sprite.src = 'img/player-left.png';
                 }
             }, 5000);
-            clearTimeout(this.jetpackTimeout);
+            //clearTimeout(this.jetpackTimeout);
         }
     }
     UseIncreaseFireRate() {
